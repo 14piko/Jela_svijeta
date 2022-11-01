@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('app_show') }}">
+        <span class='glyphicon glyphicon-chevron-left fa-2x'></span>
+        <span class='glyphicon glyphicon-chevron-left fa-2x' style="margin-left: -5px"></span>
+    </a>
+    <div class="row">
+        <div class="col-lg-4 col-lg-push-1">
+            <h1 class="page-header naslov-boja">{{ food.name|trans }}</h1>
+            <div class="row">
+                <div class="col-lg-4">
+                    <p class="control-label">{% trans %}Sastojci{% endtrans %}</p>
+                    <h4>
+                        {% for ingredient in ingredients %}
+                            {{ ingredient.title|trans }}
+                            <br/>
+                        {% endfor %}
+                    </h4>
+                </div>
+                <div class="col-lg-4">
+                    <p class="control-label">{% trans %}Oznake{% endtrans %}</p>
+                    <h4>
+                        {% for tag in tags %}
+                            {{ tag.title|trans }}
+                            <br/>
+                        {% endfor %}
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

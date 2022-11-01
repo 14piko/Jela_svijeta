@@ -1,0 +1,17 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link href="/css/hoover.css" rel="stylesheet" media="all" />
+{% endblock %}
+
+{% block body %}
+        <img src="{{ asset('images/food.jpg') }}" width="100%" height="90%">
+    <div style="position:absolute;top: 40%;left:30%">
+        <a href="{{ path('app_show') }}" class="button3" style="height: 50px;width: 600px;">
+            <h4 style="color:red">Dobrodošli na jela svijeta!</h4>
+        </a>
+    </div>
+{% endblock %}
+

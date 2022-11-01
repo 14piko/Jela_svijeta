@@ -1,0 +1,11 @@
+index:
+  path: /
+  controller: App\Controller\QuestionController::homepage
+
+show:
+  path: /show
+  controller: App\Controller\QuestionController:show
+
+category:
+  path: /home/category/{slug}
+  controller: App\Controller\QuestionController:category
